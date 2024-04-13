@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Cheat Sheet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p><h1><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="html" width="100">Cheat Sheet</h1></p>
+    <main>
+        <div class="container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="search()">Search</button>
+            <ul id="searchResults"></ul>
+        </div>
+        <div class="group1">
+            <div class="group-header" onclick="toggleGroup(this)">
+                <h2>Document metadata</h2>
+            </div>
+            <div class="group1-content hidden">
+                <ul>
+                &lt;head&gt; … &lt;/head&gt;
+                <p>The HTML &lt;head&gt; element contains machine-readable information (metadata) about the document, like its title, scripts, and style sheets.</li>
+                &lt;link&gt;
+                <p>The HTML External Resource Link element (&lt;link&gt;) specifies relationships between the current document and an external resource. This element is most commonly used to link to stylesheets, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.</li>
+                <p>&lt;meta&gt;
+                <p>The HTML &lt;meta&gt; element represents metadata that cannot be represented by other HTML meta-related elements, like &lt;base&gt;, &lt;link&gt;, &lt;script&gt;, &lt;style&gt; or &lt;title&gt;</li>
+                <p>&lt;style&gt; … &lt;/style&gt;
+                <p>The HTML &lt;style&gt; element contains style information for a document, or part of a document.</li>
+                <p>&lt;title&gt; … &lt;/title&gt;
+                <p>The HTML Title element (&lt;title&gt;) defines the document's title that is shown in a browser's title bar or a page's tab.</li>
+                </ul>
+                <h3>Example:</h3>
+                <code>
+                    &lt;!DOCTYPE html&gt;<br>
+                    &lt;html lang="en"&gt;<br>
+                    &lt;head&gt;...&lt;/head&gt;<br>
+                    &lt;body&gt;...&lt;/body&gt;<br>
+                    &lt;/html&gt;
+                </code>
+            </div>
+        </div>
+        <br>
+        <div class="group2">
+            <div class="group-header" onclick="toggleGroup(this)">
+                 <h2>Sectioning root</h2>
+            </div>
+            <div class="group2-content hidden">
+            <ul>
+            <p>
+                &lt;body&gt;&lt;/body&gt;
+                <p>The HTML &lt;body&gt; Element represents the content of an HTML document. There can be only one &lt;body&gt; element in a document.
+            </p>
+            <h3>Example:</h3>
+            <code>
+            &lt;html&gt;<br>
+            &lt;head&gt;<br>
+            &lt;title&gt;Document title&lt;/title&gt;<br>
+            &lt;/head&gt;<br>
+            &lt;body&gt;<br>
+            &nbsp;&nbsp;&lt;p&gt;This is a paragraph&lt;/p&gt;<br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;
+            </code>
+        </ul>
+        </div>
+        <br>
+        <div class="group3">
+        <div class="group-header" onclick="toggleGroup(this)">
+                <h2>Content Sectioning</h2>
+            </div>
+        <div class="group3-content hidden">
+        <ul>    
+            &lt;address&gt; … &lt;/address&gt;: The HTML &lt;address&gt; element indicates that the enclosed HTML provides contact information for a person or people, or for an organization.</p>
+            &lt;article&gt; … &lt;/article&gt;: The HTML &lt;article&gt; element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication).</p>
+            &lt;aside&gt; … &lt;/aside&gt;: The HTML &lt;aside&gt; element represents a portion of a document whose content is only indirectly related to the document's main content.</p>
+            &lt;footer&gt; … &lt;/footer&gt;: The HTML &lt;footer&gt; element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data, or links to related documents.</p>
+            &lt;header&gt; … &lt;/header&gt;: The HTML &lt;header&gt; element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.</p>
+            &lt;h1&gt; to &lt;h6&gt; … &lt;/h6&gt;: The HTML &lt;h1&gt;–&lt;h6&gt; elements represent six levels of section headings. &lt;h1&gt; is the highest section level and &lt;h6&gt; is the lowest.</p>
+            &lt;main&gt; … &lt;/main&gt;: The HTML &lt;main&gt; element represents the dominant content of the &lt;body&gt; of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.</p>
+            &lt;nav&gt; … &lt;/nav&gt;: The HTML &lt;nav&gt; element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.</p>
+            &lt;section&gt; … &lt;/section&gt;: The HTML &lt;section&gt; element represents a standalone section — which doesn't have a more specific semantic element to represent it — contained within an HTML document.</p>
+            <h3>Example:</h3>
+            <code>
+            &lt;address&gt;<br>
+            &nbsp;&nbsp;&lt;a href="mailto:jim@rock.com"&gt;jim@rock.com&lt;/a&gt;&lt;br&gt;<br>
+            &nbsp;&nbsp;&lt;a href="tel:+13115552368"&gt;(311) 555-2368&lt;/a&gt;<br>
+            &lt;/address&gt;
+            </code>
+        </ul>
+        </div>
+        <br>
+        <div class="group4">
+            <div class="group-header" onclick="toggleGroup(this)">
+                 <h2>Text Content</h2>
+            </div>
+            <div class="group-content hidden">
+        <ul>
+            &lt;blockquote&gt; … &lt;/blockquote&gt;: The HTML &lt;blockquote&gt; Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see Notes for how to change it). A URL for the source of the quotation may be given using the cite attribute, while a text representation of the source can be given using the &lt;cite&gt; element.</p>
+            &lt;dd&gt; … &lt;/dd&gt;</code>: The HTML &lt;dd&gt; element provides the description, definition, or value for the preceding term (&lt;dt&gt;) in a description list (&lt;dl&gt;).</p>
+            &lt;div&gt; … &lt;/div&gt;</code>: The HTML Content Division element (&lt;div&gt;) is the generic container for flow content. It has no effect on the content or layout until styled using CSS.</p>
+            &lt;dl&gt; … &lt;/dl&gt;</code>: The HTML &lt;dl&gt; element represents a description list. The element encloses a list of groups of terms (specified using the &lt;dt&gt; element) and descriptions (provided by &lt;dd&gt; elements). Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).</p>
+            &lt;dt&gt; … &lt;/dt&gt;</code>: The HTML &lt;dt&gt; element specifies a term in a description or definition list, and as such must be used inside a &lt;dl&gt; element.</p>
+            &lt;figcaption&gt; … &lt;/figcaption&gt;</code>: The HTML &lt;figcaption&gt; or Figure Caption element represents a caption or legend describing the rest of the contents of its parent &lt;figure&gt; element.</p>
+            &lt;figure&gt; … &lt;/figure&gt;</code>: The HTML &lt;figure&gt; (Figure With Optional Caption) element represents self-contained content, potentially with an optional caption, which is specified using the (&lt;figcaption&gt;) element.</p>
+            &lt;hr&gt;</code>: The HTML &lt;hr&gt; element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section.</p>
+            &lt;li&gt; … &lt;/li&gt;</code>: The HTML &lt;li&gt; element is used to represent an item in a list.</p>
+            &lt;ol&gt; … &lt;/ol&gt;</code>: The HTML &lt;ol&gt; element represents an ordered list of items, typically rendered as a numbered list.</p>
+            &lt;p&gt; … &lt;/p&gt;</code>: The HTML &lt;p&gt; element represents a paragraph.</p>
+            &lt;pre&gt; … &lt;/pre&gt;</code>: The HTML &lt;pre&gt; element represents preformatted text which is to be presented exactly as written in the HTML file.</p>
+            &lt;ul&gt; … &lt;/ul&gt;</code>: The HTML &lt;ul&gt; element represents an unordered list of items, typically rendered as a bulleted list.</p>
+        <h3>Examples:</h3>
+        <code>
+            &lt;dl&gt;<br>
+            &nbsp;&nbsp;&lt;dt&gt;Denim (semigloss finish)&lt;/dt&gt;<br>
+            &nbsp;&nbsp;&lt;dd&gt;Ceiling&lt;/dd&gt;<br>
+            <br>
+            &nbsp;&nbsp;&lt;dt&gt;Denim (eggshell finish)&lt;/dt&gt;<br>
+            &nbsp;&nbsp;&lt;dt&gt;Evening Sky (eggshell finish)&lt;/dt&gt;<br>
+            &nbsp;&nbsp;&lt;dd&gt;Layered on the walls&lt;/dd&gt;<br>
+            &lt;/dl&gt;<br>
+            <br>
+            &lt;figure&gt;<br>
+            &nbsp;&nbsp;&lt;img src="/media/examples/elephant-660-480.jpg" alt="Elephant at sunset"&gt;<br>
+            &nbsp;&nbsp;&lt;figcaption&gt;An elephant at sunset&lt;/figcaption&gt;<br>
+            &lt;/figure&gt;<br>
+            <br>
+            &lt;ol&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Mix flour, baking powder, sugar, and salt.&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;In another bowl, mix eggs, milk, and oil.&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Stir both mixtures together.&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Fill muffin tray 3/4 full.&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Bake for 20 minutes.&lt;/li&gt;<br>
+            &lt;/ol&gt;
+            </code>
+        </ul>
+        </div>
+        <br>
+        <div class="group5">
+            <div class="group-header" onclick="toggleGroup(this)">
+                    <h2>Inline Text Semantics</h2>
+                </div>
+            <div class="group5-content hidden">
+            <ul>
+            &lt;a&gt;&lt;/a&gt;: The HTML element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.</p>
+            &lt;abbr&gt; … &lt;/abbr&gt;: The HTML Abbreviation element () represents an abbreviation or acronym; the optional title attribute can provide an expansion or description for the abbreviation.</p>
+            &lt;br&gt;: The HTML <br> element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.</p>
+            &lt;cite&gt; … &lt;/cite&gt;: The HTML Citation element () is used to describe a reference to a cited creative work, and must include the title of that work.</p>
+            &lt;code&gt; … &lt;/code&gt;: The HTML element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code.</p>
+            &lt;em&gt; … &lt;/em&gt;: The HTML element marks text that has stress emphasis. The element can be nested, with each level of nesting indicating a greater degree of emphasis.</p>
+            &lt;mark&gt; … &lt;/mark&gt;: The HTML Mark Text element () represents text which is marked or highlighted for reference or notation purposes, due to the marked passage's relevance or importance in the enclosing context.</p>
+            &lt;small&gt; … &lt;/small&gt;: The HTML element represents side-comments and small print, like copyright and legal text, independent of its styled presentation. By default, it renders text within it one font-size small, such as from small to x-small.</p>
+            &lt;span&gt; … &lt;/span&gt;: The HTML element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang.</p>
+            &lt;strong&gt; … &lt;/strong&gt;: The HTML Strong Importance Element () indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.</p>
+            &lt;time&gt; … &lt;/time&gt;: The HTML element represents a specific period in time.</p>
+        <h3>Examples:</h3>
+        <code>
+            &lt;blockquote&gt;<br>
+            &nbsp;&nbsp;&lt;p&gt;It was a bright cold day in April, and the clocks were striking thirteen.&lt;/p&gt;<br>
+            &nbsp;&nbsp;&lt;footer&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;First sentence in &lt;cite&gt;&lt;a href="http://www.george-orwell.org/1984/0.html"&gt;&lt;em&gt;Nineteen Eighty-Four&lt;/em&gt;&lt;/a&gt;&lt;/cite&gt; by George Orwell (Part 1, Chapter 1).<br>
+            &nbsp;&nbsp;&lt;/footer&gt;<br>
+            &lt;/blockquote&gt;<br>
+            <br>
+            &lt;p&gt;You can use &lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt; to style your<br>
+            &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;.&lt;/p&gt;
+        </code>
+    </ul>
+    </div>
+    <br>
+        <div class="group6">
+            <div class="group-header" onclick="toggleGroup(this)">
+                <h2>Image and Multimedia</h2>
+            </div>
+            <div class="group6-content hidden">
+        <ul>        
+        &lt;audio&gt; … &lt;/audio&gt;: The HTML element is used to embed sound content in documents. It may contain one or more audio sources, represented using the src attribute or the element: the browser will choose the most suitable one. It can also be the destination for streamed media, using a MediaStream.</p>
+        &lt;img&gt;: The HTML element embeds an image into the document.</p>
+        &lt;track&gt;: The HTML element is used as a child of the media elements and . It lets you specify timed text tracks (or time-based data), for example to automatically handle subtitles. The tracks are formatted in WebVTT format (.vtt files) — Web Video Text Tracks or Timed Text Markup Language (TTML).</p>
+        &lt;video&gt; … &lt;/video&gt;: The HTML Video element () embeds a media player which supports video playback into the document. You can use for audio content as well, but the element may provide a more appropriate user experience.</p>
+        <h3>Examples:</h3>
+        <code>
+        &lt;img class="fit-picture" src="/media/examples/grapefruit-slice-332-332.jpg" alt="Grapefruit slice atop a pile of other slices"&gt;
+        &lt;figure&gt;
+        &lt;figcaption&gt;Listen to the T-Rex:&lt;/figcaption&gt;
+        &lt;audio controls src="/media/examples/t-rex-roar.mp3"&gt; Your browser does not support the &lt;code&gt;audio&lt;/code&gt; element. &lt;/audio&gt;
+        &lt;/figure&gt;
+        &lt;video controls width="250" src="/media/examples/friday.mp4"&gt;
+        &lt;track default kind="captions" srclang="en" src="/media/examples/friday.vtt"/&gt;
+        Sorry, your browser doesn't support embedded videos.
+        &lt;/video&gt;
+    </code>
+    </ul>
+    </div>
+    <br>
+        <div class="group7">
+            <div class="group-header" onclick="toggleGroup(this)">
+                <h2>Scripting</h2>
+            </div>
+            <div class="group7-content hidden">
+        <ul>
+        &lt;script&gt; … &lt;/script&gt;: The HTML &lt;script&gt; element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code.</li>
+        <h3>Example:</h3>
+        <code>
+        <p>&lt;script type="text/javascript" src="javascript.js"&gt;&lt;/script&gt;
+        <p>&lt;script src="javascript.js"&gt;&lt;/script&gt;
+    </code>
+    </ul>
+    </div>
+    <br>
+        <div class="group8">
+            <div class="group-header" onclick="toggleGroup(this)">
+                <h2>Demarcating Edits</h2>
+            </div>
+            <div class="group8-content hidden">
+        <ul>
+        &lt;del&gt; … &lt;/del&gt;: The HTML &lt;del&gt; element represents a range of text that has been deleted from a document.</li>
+        &lt;ins&gt; … &lt;/ins&gt;: The HTML &lt;ins&gt; element represents a range of text that has been added to a document.</li>
+        <h3>Example:</h3>
+        <code>
+            <p>“You're late!”</p>
+            &lt;del&gt;
+            <p>“I apologize for the delay.”</p>
+            &lt;/del&gt;
+            &lt;ins cite="../howtobeawizard.html" datetime="2018-05"&gt;
+            <p>“A wizard is never late …”</p>
+            &lt;/ins&gt;
+        </code>
+    </ul>
+    </div>
+    <br>
+        <div class="group9">
+            <div class="group-header" onclick="toggleGroup(this)">
+                <h2>Table Content</h2>
+            </div>
+            <div class="group9-content hidden">
+    <ul>
+        &lt;caption&gt; … &lt;/caption&gt;: The HTML Table Caption element (&lt;caption&gt;) specifies the caption (or title) of a table, and if used is always the first child of a &lt;table&gt;.<br>
+        &lt;table&gt; … &lt;/table&gt;: The HTML &lt;table&gt; element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.<br>
+        &lt;tbody&gt; … &lt;/tbody&gt;: The HTML Table Body element (&lt;tbody&gt;) encapsulates a set of table rows (&lt;tr&gt; elements), indicating that they comprise the body of the table (&lt;table&gt;).<br>
+        &lt;td&gt; … &lt;/td&gt;: The HTML &lt;td&gt; element defines a cell of a table that contains data. It participates in the table model.<br>
+        &lt;tfoot&gt; … &lt;/tfoot&gt;: The HTML &lt;tfoot&gt; element defines a set of rows summarizing the columns of the table.<br>
+        &lt;th&gt; … &lt;/th&gt;: The HTML &lt;th&gt; element defines a cell as the header of a group of table cells. The exact nature of this group is defined by the scope and headers attributes.<br>
+        &lt;thead&gt; … &lt;/thead&gt;: The HTML &lt;thead&gt; element defines a set of rows defining the head of the columns of the table.<br>
+        &lt;tr&gt; … &lt;/tr&gt;: The HTML &lt;tr&gt; element defines a row of cells in a table. The row's cells can then be established using a mix of &lt;td&gt; (data cell) and &lt;th&gt; (header cell) elements.<br>
+        <h3>Example:</h3>
+        <code>
+            &lt;table&gt;<br>
+            &lt;thead&gt;<br>
+            &lt;tr&gt;<br>
+            &lt;th colspan="2"&gt;The table header&lt;/th&gt;<br>
+            &lt;/tr&gt;<br>
+            &lt;/thead&gt;<br>
+            &lt;tbody&gt;<br>
+            &lt;tr&gt;<br>
+            &lt;td&gt;The table body&lt;/td&gt;<br>
+            &lt;td&gt;with two columns&lt;/td&gt;<br>
+            &lt;/tr&gt;<br>
+            &lt;/tbody&gt;<br>
+            &lt;/table&gt;<br>
+        </code>
+    </ul>
+</div>
+<br>
+        <div class="group10">
+            <div class="group-header" onclick="toggleGroup(this)">
+                <h2>Forms</h2>
+            </div>
+            <div class="group10-content hidden">
+    <ul>
+    &lt;button&gt; … &lt;/button&gt;: The HTML &lt;button&gt; element represents a clickable button, which can be used in forms or anywhere in a document that needs simple, standard button functionality.<br>
+    &lt;datalist&gt; … &lt;/datalist&gt;: The HTML &lt;datalist&gt; element contains a set of &lt;option&gt; elements that represent the values available for other controls.<br>
+    &lt;fieldset&gt; … &lt;/fieldset&gt;: The HTML &lt;fieldset&gt; element is used to group several controls as well as labels (&lt;label&gt;) within a web form.<br>
+    &lt;form&gt; … &lt;/form&gt;: The HTML &lt;form&gt; element represents a document section that contains interactive controls for submitting information to a web server.<br>
+    &lt;input&gt;: The HTML &lt;input&gt; element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent.<br>
+    &lt;label&gt; … &lt;/label&gt;: The HTML &lt;label&gt; element represents a caption for an item in a user interface.<br>
+    &lt;legend&gt; … &lt;/legend&gt;: The HTML &lt;legend&gt; element represents a caption for the content of its parent &lt;fieldset&gt;.<br>
+    &lt;optgroup&gt; … &lt;/optgroup&gt;: The HTML &lt;optgroup&gt; element creates a grouping of options within a &lt;select&gt; element.<br>
+    &lt;option&gt; … &lt;/option&gt;: The HTML &lt;option&gt; element is used to define an item contained in a &lt;select&gt;, an &lt;optgroup&gt;, or a &lt;datalist&gt; element. As such, &lt;option&gt; can represent menu items in popups and other lists of items in an HTML document.<br>
+    &lt;progress&gt; … &lt;/progress&gt;: The HTML &lt;progress&gt; element displays an indicator showing the completion progress of a task, typically displayed as a progress bar.<br>
+    &lt;select&gt; … &lt;/select&gt;: The HTML &lt;select&gt; element represents a control that provides a menu of options.<br>
+    &lt;textarea&gt; … &lt;/textarea&gt;: The HTML &lt;textarea&gt; element represents a multi-line plain-text editing control, useful when you want to allow users to enter a sizeable amount of free-form text, for example a comment on a review or feedback form.<br>
+    <h3>Example:</h3>
+    <code>
+        &lt;form action="" method="get" class="form-example"&gt;<br>
+        &lt;div class="form-example"&gt;<br>
+        &lt;label for="name"&gt;Enter your name: &lt;/label&gt;<br>
+        &lt;input type="text" name="name" id="name" required&gt;<br>
+        &lt;/div&gt;<br>
+        &lt;div class="form-example"&gt;<br>
+        &lt;label for="email"&gt;Enter your email: &lt;/label&gt;<br>
+        &lt;input type="email" name="email" id="email" required&gt;<br>
+        &lt;/div&gt;<br>
+        &lt;div class="form-example"&gt;<br>
+        &lt;input type="submit" value="Subscribe!"&gt;<br>
+        &lt;/div&gt;<br>
+        &lt;/form&gt;
+    </code>
+</ul>
+</div>
+<br>
+        <div class="group11">
+            <div class="group-header" onclick="toggleGroup(this)">
+            <h2>Interactive Elements</h2>
+            </div>
+            <div class="group11-content hidden">
+        <ul>
+    &lt;details&gt; … &lt;/details&gt;: The HTML Details Element (&lt;details&gt;) creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state.<br>
+    &lt;summary&gt; … &lt;/summary&gt;: The HTML Disclosure Summary element (&lt;summary&gt;) specifies a summary, caption, or legend for a &lt;details&gt; element's disclosure box.<br>
+    <h3>Example:</h3>
+    <code>
+        &lt;details&gt;<br>
+        &lt;summary&gt;Details&lt;/summary&gt;<br>
+        Something small enough to escape casual notice.<br>
+        &lt;/details&gt;
+    </code>
+    </ul>
+</div>
+    </main>
+    <script>
+        const input = document.getElementById('searchInput');
+        const resultsList = document.getElementById('searchResults');
+
+        input.addEventListener('input', function() {
+            const query = input.value.toLowerCase().trim();
+            resultsList.innerHTML = '';
+
+            const allText = document.body.innerText.toLowerCase();
+            const lines = allText.split('\n');
+
+            lines.forEach((line, index) => {
+                if (line.includes(query)) {
+                    const li = document.createElement('li');
+                    li.textContent = line.trim();
+                    li.addEventListener('click', () => {
+                        window.scrollTo(0, index * 20); 
+                    });
+                    resultsList.appendChild(li);
+                }
+            });
+
+            if (query.length > 0) {
+                resultsList.style.display = 'block';
+            } else {
+                resultsList.style.display = 'none';
+            }
+        });
+    </script>
+<fieldset>
+    <legend><h2>Contact Us</h2></legend>
+    <form action="mailto: r.gomesdapaz653@bvc.ca" method="post" enctype="text/plain">
+    <label>First Name: </label>
+    <input type="text" placeholder="First Name" required minlength="3" required>
+    <br/><br>
+    <label>Last Name: </label>
+    <input type="text" placeholder="Last name" required minlength="2" required>
+    <br/><br>
+    <label>Your e-mail:</label>
+    <input type="email" placeholder="E-mail comes here" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z{2, 5}$])" required>
+    <br/><br>
+    <u>Your message: </u>
+    <br/><br>
+    <label for="multiline"></label>
+    <textarea name="msg" id="multiline" rows="4" cols="80" placeholder="Write your message here"></textarea>
+    <br/><br/>
+    <input type="submit" value="Submit">
+    </form>
+    <br/><br/>
+    </section>
+</fieldset>
+    <script src="script.js"></script>
+</body>
+</html>
